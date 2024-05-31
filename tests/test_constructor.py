@@ -6,7 +6,7 @@ from locators import Locators
 
 class TestConstructor:
 
-
+    #Проверка, что работают переходы к разделам
     def test_buns_section(self, driver, login_data):  # переход к разделу «Булки»
         driver.implicitly_wait(3)
         driver.find_element(By.XPATH, Locators.AUTHORIZATION_BUTTON).click()

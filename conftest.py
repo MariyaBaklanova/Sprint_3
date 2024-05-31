@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+#from data import TestData
+#from locators import Locators
 
 @pytest.fixture(scope='function')
 def driver():
@@ -14,3 +16,11 @@ def driver():
     driver.get("https://stellarburgers.nomoreparties.site/")
     yield driver
     driver.quit()
+
+@pytest.fixture
+def login_data():
+    return {'email': 'marybaklanova006@ya.ru', 'password': '123yaya'}
+
+
+
+

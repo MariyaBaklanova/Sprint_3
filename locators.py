@@ -17,11 +17,11 @@ class Locators:
     CONSTRUCTOR_BUTTON = ".//p[text()='Конструктор']"  # кнопка Конструктор
     LOGO = ".//div[@class='AppHeader_header__logo__2D0X2']"  # логотип
     CONSTRUCTOR_H1 = ".//h1[text()='Соберите бургер']"   # заголовок Соберите бургер
-    BUNS_SECTION = ".//span[text()='Булки']"  # раздел Булки
+    BUNS_SECTION = ".//span[text()='Булки']/parent::div"  # раздел Булки
     NO_SELECT_BUNS_SECTION = ".//div[contains(@class, 'noselect') and not (contains(@class, 'current'))]/child::span[text()='Булки']" # невыбранный раздел Булки
     SELECT_BUNS_SECTION = ".//div[contains(@class, 'current')]/child::span[text()='Булки']"  # выбранный раздел Булки
-    SAUCES_SECTION = ".//span[text()='Соусы']"  # раздел Соусы
+    SAUCES_SECTION = ".//span[text()='Соусы']/parent::div"  # раздел Соусы
     SELECT_SAUCES_SECTION = ".//div[contains(@class, 'current')]/child::span[text()='Соусы']"  # выбранный раздел Соусы
-    TOPPINGS_SECTION = ".//span[text()='Начинки']"  # раздел Начинки
+    TOPPINGS_SECTION = ".//span[text()='Начинки']/parent::div"  # раздел Начинки
     SELECT_TOPPINGS_SECTION = ".//div[contains(@class, 'current')]/child::span[text()='Начинки']"  # выбранный раздел Начинки
     ORDER_BUTTON = ".//button[text()='Оформить заказ']"  # кнопка Оформить заказ

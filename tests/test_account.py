@@ -11,10 +11,10 @@ class TestAccount:
         login_h2 = driver.find_element(By.XPATH, Locators.LOGIN_H2).text
         assert login_h2 == 'Вход'
 
-    def test_account_login_after_authorization(self, driver):  # по клику на «Личный кабинет» после авторизации
+    def test_account_login_after_authorization(self, driver, login_data):  # по клику на «Личный кабинет» после авторизации
         driver.find_element(By.XPATH, Locators.AUTHORIZATION_BUTTON).click()
-        driver.find_element(By.XPATH, Locators.EMAIL_FIELD).send_keys('marybaklanova006@ya.ru')
-        driver.find_element(By.XPATH, Locators.PASSWORD_FIELD).send_keys('123yaya')
+        driver.find_element(By.XPATH, Locators.EMAIL_FIELD).send_keys(login_data['email'])
+        driver.find_element(By.XPATH, Locators.PASSWORD_FIELD).send_keys(login_data['password'])
         driver.find_element(By.XPATH, Locators.LOGIN_BUTTON).click()
         #time.sleep(1)
         WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, Locators.PROFILE_BUTTON))).click()
